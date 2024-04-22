@@ -92,7 +92,7 @@ input folder structure:
 
 - finally visualize all your data in a plot:
 
-  `python plot_MABA16s.py "input_csv" "output_species.html" "output_genus.html"`
+  `python plot_MABA16s.py "input_csv" "output_species.html"`
 
   the input is the newly merged CSV file you just made. the output can be put in a directory of you choosing, but don't forget to put ".html" behind the name.
 
