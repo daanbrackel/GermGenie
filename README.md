@@ -3,7 +3,9 @@ pipeline for a stacked barplot after MABA 16S is finished
 
 # Installing MABA16s
 ### Create an environment for snakemake
-`conda create --name smk Snakemake` 
+```
+conda create --name smk Snakemake 
+```
 
 ```
 `conda activate smk`
@@ -12,20 +14,31 @@ pipeline for a stacked barplot after MABA 16S is finished
 ### Install MABA16S
 do this in the direction you would like to install MABA16S in (for instance your programs folder)
 
-`git clone https://github.com/MUMC-MEDMIC/MABA16S`
+```
+git clone https://github.com/MUMC-MEDMIC/MABA16S
+```
 
 To overcome any issues with Snakemake locking it's own files preventing the pipeline frow working we will need to change a small part in the snake file:
 
 `CD` into: `/MABA16S/maba16s/` (if advise was followed, located in your programs folder)
 
-open the snake file: `nano Snakefile`
+open the snake file: 
+```
+nano Snakefile
+```
+Scroll down in the file and add "nolock
 
 ### Make an alias to be able to run from home directory
-`echo "alias MABA='/path/too/MABA16S/maba16s/cli.py snakemake'"  >> ~/.bashrc`
+```
+echo "alias MABA='/path/too/MABA16S/maba16s/cli.py snakemake'"  >> ~/.bashrc
+```
 
 Make sure to change the first part
 
-restart the terminal: `source ~/.bashrc`
+restart the terminal: 
+```
+source ~/.bashrc
+```
 
 ### installing script for processing MABA16S output
 
