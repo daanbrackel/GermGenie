@@ -5,7 +5,9 @@ pipeline for a stacked barplot after MABA 16S is finished
 ### Create an environment for snakemake
 `conda create --name smk Snakemake` 
 
+```
 `conda activate smk`
+```
 
 ### Install MABA16S
 do this in the direction you would like to install MABA16S in (for instance your programs folder)
