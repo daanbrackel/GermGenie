@@ -45,19 +45,7 @@ source ~/.bashrc
 ```
 git clone https://github.com/daanbrackel/GermGenie
 ```
-Keep in mind that this will put the scripts in a GermGenie folder.
-
-You can also manually install all python scripts in the same directory, for instance a programs folderd.
-
-you can download the list of below scripts from this repository and upload them to your programs folder or create them yourself by using nano "file_name.py", and copy pasting the script.
-
-- convert2CSV.py
-
-- process_CSV.py
-
-- merge_CSV_MABA16s.py
-
-- plot_MABA16s.py
+Keep in mind that this will put the script in a GermGenie folder.
 
 **Make sure any additional deppendencies are installed as well:**
 ```
@@ -86,66 +74,20 @@ input folder structure:
 
 # running the script for processing the output of MABA16s
 
-- start of by running the convert2CSV.py script. you can do this as followed (assuming your in the GermGenie directorie where all scripts are located):
+- start of by running the genies_lamp.py script. you can do this as followed (assuming your in the GermGenie directorie where the scripts is located):
 
   ```
-  python covert2CSV.py "input_folder" "output_folder"
+  python genies_lampV.py "input_folder" "output_folder"
   ```
 
-  the input folder is the the "report" folder you get as output from MABA16s
+  the input folder is the the "report" folder you get as output from MABA16s, containing all .xlxs files.
 
   or enter 
 
   ```
-  python convert2CSV.py --help
+  python genies_lamp.py --help
   ```
 
   for an explenation what each in/output is.
 
-- next run process_CSV.py:
-
-  ```
-  python process_CSV.py "input_folder" "output_folder"
-  ```
-
-  the input folder is the path to the folder containing the the new CSV files (your previous output folder). choose the output folder by your own for instance "csv_processed".
-
-  or enter 
-
-  ```
-  python process_CSV.py --help
-  ```
-
-  for an explenation what each in/output is.
-
-- now merge all barcodes into one dataframe:
-
-  ```
-  python merge_CSV_MABA16s.py "input_folder" "output_file"
-  ```
-
-  the input folder is the path to the folder containing the the new processed CSV files (your previous output folder, "csv_processed"). for the output place it in a directory don't forget to put .csv behind you file name.
-
-  or enter 
-
-  ```
-  python merge_CSV_MABA16s.py --help
-  ```
-
-  for an explenation what each in/output is.
-
-- finally visualize all your data in a plot:
-
-  ```
-  python plot_MABA16s.py "input_csv" "output_species.html"
-  ```
-
-  the input is the newly merged CSV file you just made. the output can be put in a directory of you choosing, but don't forget to put ".html" behind the name.
-
-  or enter 
-
-  ```
-  python plot_MABA16s.py --help
-  ```
-
-  for an explenation what each in/output is.
+Your output folder should now contain all document that where needed to creat your plot (the .html file)
