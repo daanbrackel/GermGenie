@@ -58,6 +58,11 @@ you can download the list of below scripts from this repository and upload them 
 - merge_CSV_MABA16s.py
 
 - plot_MABA16s.py
+
+Make sure Pandas is installed as well:
+```
+pip install pandas
+```
   
 # Running MABA 
 
