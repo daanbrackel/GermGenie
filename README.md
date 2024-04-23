@@ -59,7 +59,7 @@ you can download the list of below scripts from this repository and upload them 
 
 - plot_MABA16s.py
 
-Make sure any additional deppendencies are installed as well:
+**Make sure any additional deppendencies are installed as well:**
 ```
 pip install pandas
 ```
