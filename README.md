@@ -78,7 +78,7 @@ input folder structure:
 - start of by running the convert2CSV.py script. you can do this as followed (assuming your in the GermGenie directorie where all scripts are located):
 
   ```
-  python convert2CSV.py "input_folder" "output_folder"
+  python covert2CSV.py "input_folder" "output_folder"
   ```
 
   the input folder is the the "report" folder you get as output from MABA16s
