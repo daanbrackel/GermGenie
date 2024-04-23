@@ -42,7 +42,12 @@ source ~/.bashrc
 
 ### installing script for processing MABA16S output
 
-install all python scripts in the same directory (preferrebly in the same programs folder were you installed MABA16S).
+```
+git clone https://github.com/daanbrackel/GermGenie
+```
+Keep in mind that this will put the scripts in a GermGenie folder.
+
+You can also manually install all python scripts in the same directory, for instance a programs folderd.
 
 you can download the list of below scripts from this repository and upload them to your programs folder or create them yourself by using nano "file_name.py", and copy pasting the script.
 
@@ -70,7 +75,7 @@ input folder structure:
 
 # running the script for processing the output of MABA16s
 
-- start of by running the convert2CSV.py script. you can do this as followed (assuming your in the program directorie where all scripts are located):
+- start of by running the convert2CSV.py script. you can do this as followed (assuming your in the GermGenie directorie where all scripts are located):
 
   ```
   python convert2CSV.py "input_folder" "output_folder"
