@@ -1,4 +1,4 @@
-# MABA16s_after_process
+# GermGenie
 pipeline for a stacked barplot after MABA 16S is finished
 
 # Installing MABA16s
