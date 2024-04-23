@@ -58,8 +58,9 @@ you can download the list of below scripts from this repository and upload them 
 
 Start by running the following commandline:
 
-`MABA --cores 8 -i input/* -o output`
-
+```
+MABA --cores 8 -i input/* -o output
+```
 the input should be replaced with a folder containing a barcode folder that holds a fastq.gz file of the barcode. The output should be a folder of your choice (recommended to use a name similar to the run name). The cores can be changed by your liking.
 
 input folder structure:
@@ -71,48 +72,64 @@ input folder structure:
 
 - start of by running the convert2CSV.py script. you can do this as followed (assuming your in the program directorie where all scripts are located):
 
-  `python convert2CSV.py "input_folder" "output_folder"`
+  ```
+  python convert2CSV.py "input_folder" "output_folder"
+  ```
 
   the input folder is the the "report" folder you get as output from MABA16s
 
   or enter 
 
-  `python convert2CSV.py --help`
+  ```
+  python convert2CSV.py --help
+  ```
 
   for an explenation what each in/output is.
 
 - next run process_CSV.py:
 
-  `python process_CSV.py "input_folder" "output_folder"`
+  ```
+  python process_CSV.py "input_folder" "output_folder"
+  ```
 
   the input folder is the path to the folder containing the the new CSV files (your previous output folder). choose the output folder by your own for instance "csv_processed".
 
   or enter 
 
-  `python process_CSV.py --help`
+  ```
+  python process_CSV.py --help
+  ```
 
   for an explenation what each in/output is.
 
 - now merge all barcodes into one dataframe:
 
-  `python merge_CSV_MABA16s.py "input_folder" "output_file"`
+  ```
+  python merge_CSV_MABA16s.py "input_folder" "output_file"
+  ```
 
   the input folder is the path to the folder containing the the new processed CSV files (your previous output folder, "csv_processed"). for the output place it in a directory don't forget to put .csv behind you file name.
 
   or enter 
 
-  `python merge_CSV_MABA16s.py --help`
+  ```
+  python merge_CSV_MABA16s.py --help
+  ```
 
   for an explenation what each in/output is.
 
 - finally visualize all your data in a plot:
 
-  `python plot_MABA16s.py "input_csv" "output_species.html"`
+  ```
+  python plot_MABA16s.py "input_csv" "output_species.html"
+  ```
 
   the input is the newly merged CSV file you just made. the output can be put in a directory of you choosing, but don't forget to put ".html" behind the name.
 
   or enter 
 
-  `python plot_MABA16s.py --help`
+  ```
+  python plot_MABA16s.py --help
+  ```
 
   for an explenation what each in/output is.
