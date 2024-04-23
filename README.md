@@ -66,6 +66,9 @@ pip install pandas
 ```
 pip install openpyxl
 ```
+```
+pip install plotly
+```
   
 # Running MABA 
 
