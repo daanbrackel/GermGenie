@@ -1,5 +1,5 @@
 # GermGenie
-pipeline for a stacked barplot after MABA 16S is finished
+pipeline for a stacked barplot after MABA16S is finished. it is based on the report folder filled with .xlxs files per barcode. these filde contain the amount of reads per species for each barcode.
 
 # Installing MABA16s
 ### Create an environment for snakemake
@@ -24,9 +24,41 @@ To overcome any issues with Snakemake locking it's own files preventing the pipe
 
 open the snake file: 
 ```
-nano Snakefile
+nano cli.py
 ```
-Scroll down in the file and add "nolock
+Scroll down in the file and replace the entire part below "parsing part" with the following text:
+```
+
+    args = parser.parse_args(command_line)
+    if args.mode == "rename":
+        renamer(
+                input_file=args.input_directory,
+                spreadsheet=args.spreadsheet
+                )
+
+    elif args.mode == "snakemake":
+        snakemake_in(
+                samples=args.input_files,
+                outdir=args.outdir,
+                )
+
+        os.chdir(f"{locationrepo}")
+
+        if args.smkparams == None:
+            args.smkparams=""
+        exitstatus = os.system(f"snakemake --cores {args.cores} --nolock --use-conda {args.smkparams} --snakefile Snakefile_check_suitable_sample>
+        if exitstatus > 0:
+            sys.exit("pre-workflow crashed")
+        os.system(f"snakemake -p --cores {args.cores} --use-conda {args.smkparams} --nolock --notemp --keep-going")
+
+    else:
+        parser.print_usage()
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())  # pragma: no cover
+```
 
 ### Make an alias to be able to run from home directory
 ```
@@ -77,10 +109,10 @@ input folder structure:
 - start of by running the genies_lamp.py script. you can do this as followed (assuming your in the GermGenie directorie where the scripts is located):
 
   ```
-  python genies_lampV.py "input_folder" "output_folder"
+  python genies_lamp.py "input_folder" "output_folder"
   ```
 
-  the input folder is the the "report" folder you get as output from MABA16s, containing all .xlxs files.
+  the input folder is the the "report" folder you get as output from MABA16s, containing all .xlxs files. the output folder can be any folder desired by the user.
 
   or enter 
 
