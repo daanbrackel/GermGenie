@@ -1,5 +1,5 @@
 # GermGenie
-pipeline for a stacked barplot after MABA16S is finished. it is based on the report folder filled with .xlxs files per barcode. these filde contain the amount of reads per species for each barcode.
+pipeline for a stacked barplot and a table that contains the total reads, classified reads and the abundance percentage per species (after MABA16S is finished). it is based on the report folder filled with .xlxs files per barcode. these files contain the amount of reads per species for each barcode.
 
 # Installing MABA16s
 ### Create an environment for snakemake
