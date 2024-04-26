@@ -103,7 +103,7 @@ input folder structure:
 
 ![image](https://github.com/daanbrackel/MABA16s_after_process/assets/127868974/5b460540-0d40-4835-8a5e-41d3e5b0e1dc)
 
-In case your folder only holds a list of fastq.gz files you can use the sorter.py script to generate the desired folder structer
+In case your folder only holds a list of fastq.gz files, you can use the sorter.py script to generate the desired folder structer. (this script can be run from the GermGenie directory)
 ```
 python sorter.py "input folder with all fastq.gz files" "output where you want the new folder structure"
 ```
